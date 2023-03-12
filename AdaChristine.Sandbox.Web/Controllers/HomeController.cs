@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AdaChristine.Sandbox.Web.Models;
+using System.Net;
 
 namespace AdaChristine.Sandbox.Web.Controllers;
 
@@ -23,9 +24,10 @@ public class HomeController : Controller
         return View();
     }
 
+    [Route("/HttpError/{statusCode}")]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult HttpError(System.Net.HttpStatusCode statusCode)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(new ErrorViewModel { StatusCode = statusCode, RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

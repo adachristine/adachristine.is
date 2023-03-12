@@ -1,0 +1,16 @@
+﻿@using System.Net
+@model ErrorViewModel
+@{
+    ViewData["Title"] = $"HTTP {Model.StatusCode.HasValue ?? Model.StatusCode : "(Unknown)"}";
+}
+
+<h1 class="text-warning">HTTP Error</h1>
+<h3 class="text-warning">@(Model.StatusCode?.ToString() ?? "(Unknown)")</h3>
+<h4 class="text-warning">@(!string.IsNullOrEmpty(Model.StatusReason) ? Model.StatusReason : "(Unknown)")
+
+@if (Model.ShowRequestId && !string.IsNullOrEmpty(Model.RequestId))
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
