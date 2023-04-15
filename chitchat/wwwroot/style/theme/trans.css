@@ -1,0 +1,47 @@
+.bg-flag {
+	background: repeating-linear-gradient(
+		to bottom,
+		skyblue 0%,
+		skyblue 20%,
+		pink 20%,
+		pink 40%,
+		snow 40%,
+		snow 60%,
+		pink 60%,
+		pink 80%
+	);
+}
+
+.bg-solid {
+	border-radius: 3px;
+	background: #222222;
+	color: whitesmoke;
+}
+
+a:link {
+    color: skyblue;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: pink;
+}
+
+.border-glow {
+    box-shadow: 0 0 1.5em skyblue inset;
+}
+
+.border-liner {
+    border: 2px solid pink;
+    border-radius: 3px;
+}
+
+.editor input, .editor textarea {
+	background: #444444;
+	color: whitesmoke;
+	border: none;
+}
+

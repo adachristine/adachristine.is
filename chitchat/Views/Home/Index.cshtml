@@ -1,0 +1,8 @@
+﻿@using chitchat.models
+@model index_model
+
+@foreach (var post in Model.posts)
+{
+    await Html.RenderPartialAsync("~/Views/Partial/post_index.cshtml", post);
+}
+

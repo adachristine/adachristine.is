@@ -1,0 +1,11 @@
+@using chitchat.models
+@model post_model
+
+<article class="content-item">
+    <header>
+        <h2>@Model.title</h2>
+        <time datetime="">@Model.create_time</time>
+    </header>
+    @Html.Raw(Model.index_content)
+</article>
+

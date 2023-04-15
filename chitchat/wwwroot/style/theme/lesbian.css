@@ -1,0 +1,15 @@
+.bg-flag {
+	background: repeating-linear-gradient(
+		to bottom,
+		#d52d00 0%,
+		#d52d00 20%,
+		#ff9a56 20%,
+		#ff9a56 40%,
+		white 40%,
+		white 60%,
+		#b55690 60%,
+		#b55690 80%,
+		#a30262 80%,
+		#a30262 100%
+	);
+}

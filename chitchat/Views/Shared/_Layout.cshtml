@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>adachristine.is</title>
+        <link rel="stylesheet" href="~/style/layout.css" />
+        <link rel="stylesheet" href="~/style/theme.css" />
+        <link rel="stylesheet" href="~/style/theme/trans.css" />
+    </head>
+    <body class="bg-flag">
+        <div class="page bg-transparent">
+            <header class="bg-solid border-glow site-header">
+                <div class="border-liner">
+                    <h1>adachristine.is</h1>
+                    <nav>
+                        <menu>
+                            <li><a href="gay.html">gay</a></li>
+                            <li><a href="lesbian.html">lesbian</a></li>
+                            <li><a href="trans.html">trans</a></li>
+                            <li><a href="programming.html">programming</a></li>
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+            <div class="content bg-solid border-glow">
+                <div class="content-inner border-liner">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        @await RenderSectionAsync("scripts", required: false)
+    </body>
+</html>
